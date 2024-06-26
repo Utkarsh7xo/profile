@@ -28,15 +28,16 @@ function App() {
   }, []);
 
   return (
-    <div className='relative h-screen md:overflow-y-auto  bg-rose-200'>
+    <div className='relative h-screen md:overflow-y-auto'>
       {/* <div className='fixed inset-0 bg-cover bg-center bg-gradient-to-r from-slate-900 to-slate-700'></div>
        */}
-       {/* <div className='fixed inset-0 bg-cover bg-center bg-rose-200'></div>
+       {/* 
        <div className='fixed inset-0 gradient-peach'></div>
        <div className='fixed inset-0 gradient-purple'></div>
        <div className='fixed inset-0 gradient-yellow'></div> */}
-       <img className='fixed inset-0 bg-cover bg-center h-full w-full' src={process.env.PUBLIC_URL + '/img/background.png'} alt="DP" /> 
-       <img className='md:hidden fixed inset-0 bg-cover bg-center h-full w-full' src={process.env.PUBLIC_URL + '/img/background_mobile.png'} alt="DP" /> 
+       <div className='fixed inset-0 bg-cover bg-center bg-gradient-to-tr from-violet-500 to-orange-300'></div>
+       <img className='md:block hidden fixed inset-0 bg-cover bg-center h-full w-full' src={process.env.PUBLIC_URL + '/img/background.png'} alt="DP" /> 
+       {/* <img className='md:hidden fixed inset-0 bg-cover bg-center h-full w-full' src={process.env.PUBLIC_URL + '/img/background_mobile.png'} alt="DP" />  */}
       
       {/* <div className='fixed inset-0 bg-cover bg-center' style={{backgroundImage:'url(img/grid-png-8.png)'}}>
       </div> */}

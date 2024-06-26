@@ -27,7 +27,7 @@ export default function About() {
 function Card({ heading, description, imgUrl, year }) {
     return (
         <div className="w-full lg:w-2/3 flex-row cursor-pointer transition my-2">
-            <div className="w-full h-24 bg-white bg-opacity-20 hover:bg-opacity-45 transition backdrop-blur-lg rounded-3xl flex overflow-hidden">
+            <div className="w-full h-24 bg-gray-200 hover:bg-gray-300 md:bg-white md:bg-opacity-20 md:hover:bg-opacity-45  md:backdrop-blur-lg rounded-3xl flex overflow-hidden">
                 <div className="md:w-1/3 w-1/4 h-full flex items-center justify-center">
                     <img src={imgUrl} alt={heading} className="object-cover h-full flex items-center" />
 

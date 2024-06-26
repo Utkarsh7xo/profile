@@ -15,7 +15,7 @@ export default function Tabs() {
                         key={index}
                         className={`py-2 px-4 -mb-px transition font-semibold focus:outline-none ${activeTab === index ?
                             "border-b-2 border-blue-800 text-blue-800" :
-                            "border-b-2 border-transparent text-gray-100 hover:text-gray-900"
+                            "border-b-2 border-transparent text-gray-700 hover:text-gray-900 md:text-gray-50"
                             }
                         `}
                         onClick={() => setActiveTab(index)}>

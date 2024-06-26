@@ -127,8 +127,7 @@ export default function Projects() {
 function Card({ heading, url, description, imgUrl, tags }) {
     return (
         <div className="w-full lg:w-2/3 flex-row cursor-pointer transition mb-4" onClick={() => window.location.href = url}>
-            <div className="w-full h-40 bg-red-50 rounded-3xl flex overflow-hidden">
-            {/* bg-opacity-20 hover:bg-opacity-45 transition backdrop-blur-lg */}
+            <div className="w-full h-40 bg-gray-200 hover:bg-gray-300 rounded-3xl flex overflow-hidden md:bg-opacity-20 md:hover:bg-opacity-50 md:transition md:backdrop-blur-lg ">
                 <div className="md:w-1/3 w-1/4 h-full flex">
                     <img src={imgUrl} alt={heading} className="object-cover w-full h-auto" />
                 </div>
@@ -148,6 +147,6 @@ function Card({ heading, url, description, imgUrl, tags }) {
 
 function Tag({ title }) {
     return (
-        <p className="inline mr-1 px-1 text-xs rounded-lg bg-rose-400">{title}</p>
+        <p className="inline mr-1 px-1 text-xs rounded-lg bg-rose-300">{title}</p>
     );
 }
