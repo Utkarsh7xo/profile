@@ -127,7 +127,8 @@ export default function Projects() {
 function Card({ heading, url, description, imgUrl, tags }) {
     return (
         <div className="w-full lg:w-2/3 flex-row cursor-pointer transition mb-4" onClick={() => window.location.href = url}>
-            <div className="w-full h-40 bg-white bg-opacity-20 hover:bg-opacity-45 transition backdrop-blur-lg rounded-3xl flex overflow-hidden">
+            <div className="w-full h-40 bg-red-50 rounded-3xl flex overflow-hidden">
+            {/* bg-opacity-20 hover:bg-opacity-45 transition backdrop-blur-lg */}
                 <div className="md:w-1/3 w-1/4 h-full flex">
                     <img src={imgUrl} alt={heading} className="object-cover w-full h-auto" />
                 </div>
