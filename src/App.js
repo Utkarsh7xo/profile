@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+
+import React, { useEffect, useRef } from 'react';
+import Profile from './Profile';
+import Content from './Content.js';
+import './App.css'; 
 
 function App() {
+  const gradientRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      const gradient = gradientRef.current;
+      if (gradient) {
+        const mouseX = event.pageX;
+        const mouseY = event.pageY;
+        const gradientSize = '200px'; 
+
+        gradient.style.background = `radial-gradient(circle ${gradientSize} at ${mouseX}px ${mouseY}px, rgba(200, 98, 95, 0.8), rgba(200, 255, 200, 0))`;
+      }
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='relative h-screen md:overflow-y-auto'>
+      {/* <div className='fixed inset-0 bg-cover bg-center bg-gradient-to-r from-slate-900 to-slate-700'></div>
+       */}
+       <div className='fixed inset-0 bg-cover bg-center bg-rose-200'></div>
+       <div className='fixed inset-0 gradient-peach'></div>
+       <div className='fixed inset-0 gradient-purple'></div>
+       <div className='fixed inset-0 gradient-yellow'></div>
+      
+      {/* <div className='fixed inset-0 bg-cover bg-center' style={{backgroundImage:'url(img/grid-png-8.png)'}}>
+      </div> */}
+      <div ref={gradientRef} className="MouseGradient"></div>
+      <div className="relative z-10 flex flex-col h-screen md:flex-row">
+        <Profile />
+        <Content />
+      </div>
+      
     </div>
   );
 }
