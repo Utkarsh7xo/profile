@@ -40,7 +40,7 @@ const otherProjects = [
     {
         "heading": "Simulations and Animations",
         "description": "Self Project (2017): Developed interactive simulations and animations using p5.js, exploring topics in physics, mathematics, nature, and art. Created over 25+ physics-based animations utilizing concepts like vector algebra, calculus, and particle dynamics.",
-        "imgUrl": "https://p5js.org/assets/img/p5js.svg",
+        "imgUrl": "https://seeklogo.com/images/P/p5-js-logo-85C733C6AD-seeklogo.com.png",
         "tags": ['p5.js', 'physics simulations', 'animations'],
         "url": ""
     }
@@ -129,8 +129,7 @@ function Card({ heading, url, description, imgUrl, tags }) {
         <div className="w-full lg:w-2/3 flex-row cursor-pointer transition mb-4" onClick={() => window.location.href = url}>
             <div className="w-full h-40 bg-white bg-opacity-20 hover:bg-opacity-45 transition backdrop-blur-lg rounded-3xl flex overflow-hidden">
                 <div className="md:w-1/3 w-1/4 h-full flex">
-                    <img src={imgUrl} alt={heading} className="object-cover w-full h-full" />
-
+                    <img src={imgUrl} alt={heading} className="object-cover w-full h-auto" />
                 </div>
                 <div className="ml-5 tracking-tighter md:w-2/3 w-2/3 h-full flex-col mr-2">
                     <div className="pt-2 text-sm font-bold line-clamp-2"><h1>{heading}</h1></div>

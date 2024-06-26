@@ -11,7 +11,7 @@ export default function Contacts() {
                 <div className="p-1 w-8">
                     <FontAwesomeIcon icon={faEnvelope} size="2x" />
                 </div>
-                <div className="ml-4 p-1 mt-1 hover:text-red-800"><a href="mialto:utkarsh7xo@gmail.com">utkarsh7xo@gmail.com</a></div>
+                <div className="ml-4 p-1 mt-1 hover:text-red-800"><a href="mailto:utkarsh7xo@gmail.com">utkarsh7xo@gmail.com</a></div>
            
             </div>
             {/* Linked In */}

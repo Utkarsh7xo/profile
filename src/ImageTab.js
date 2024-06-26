@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ImageTab() {
     return (
-        <div className="flex flex-col md:flex-row h-screen">
+        <div className="flex flex-col md:flex-row h-auto md:h-screen">
             <Image />
             <Info />
         </div>
@@ -13,8 +13,9 @@ export default function ImageTab() {
 function Image() {
     return (
         <div className='w-full md:mx-5 md:mt-0 mt-10 md:w-1/2 flex justify-center items-center'>
-            <div className="rounded-full h-64 w-64 overflow-hidden">
-                <img className='object-cover h-full w-full' src="img/dp.png" alt="DP" />
+            <div className="rounded-full h-40 w-40 md:h-64 md:w-64 overflow-hidden">
+                {/* <img className='object-cover h-full w-full' src="img/dp.png" alt="DP" /> */}
+                <img className='object-cover h-full w-full' src={process.env.PUBLIC_URL + '/img/dp.png'} alt="DP" /> 
             </div>
         </div>
     );

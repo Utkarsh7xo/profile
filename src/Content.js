@@ -8,7 +8,7 @@ function Content(){
           <div className="w-full h-5"></div>
           </div>
         </div>
-    );
+    ); 
 }
 
 export default Content;
